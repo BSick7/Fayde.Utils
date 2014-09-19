@@ -1,0 +1,11 @@
+{
+  "name": "Fayde.Utils",
+  "ignore": [
+    "build",
+    "nuget",
+    "src",
+    "test",
+    "testsite",
+    "Gruntfile.js"
+  ]
+}

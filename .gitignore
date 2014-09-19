@@ -1,0 +1,16 @@
+[Oo]bj
+[Bb]in
+*.suo
+*.user
+*.dll
+*.xap
+*.js.map
+src/packages
+src/Fayde.Controls.Test/ViewModels/MainViewModel.js
+.idea
+node_modules
+testsite/lib
+testsite/ViewModels/MainViewModel.js
+test/lib
+test/runner.js
+test/tests/test1.js
