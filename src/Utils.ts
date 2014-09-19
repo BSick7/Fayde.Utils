@@ -1,3 +1,4 @@
+/// <reference path="../Extensions.d.ts" />
 
 // String
 

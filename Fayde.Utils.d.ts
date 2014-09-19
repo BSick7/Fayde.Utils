@@ -1,3 +1,4 @@
+/// <reference path="Extensions.d.ts" />
 /// <reference path="src/Fayde.d.ts" />
 declare module Fayde.Utils {
     var Version: string;
