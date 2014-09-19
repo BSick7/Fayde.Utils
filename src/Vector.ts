@@ -1,4 +1,4 @@
-module Utils{
+module Fayde.Utils{
     export class Vector extends Fayde.MVVM.ObservableObject {
 
         private _X: number;
