@@ -1,5 +1,3 @@
-/// <reference path="./Fayde.d.ts" />
-
 module Utils{
     export class Vector extends Fayde.MVVM.ObservableObject {
 
