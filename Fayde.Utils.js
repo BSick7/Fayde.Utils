@@ -91,6 +91,50 @@ Math.normalise = function (num, min, max) {
     return (num - min) / (max - min);
 };
 
+Math.constrain = function (value, low, high) {
+    return Math.clamp(value, low, high);
+};
+
+Math.radiansToDegrees = function (radians) {
+    return (radians * 360) / Math.TAU;
+};
+
+Math.distanceBetween = function (x1, y1, x2, y2) {
+    return Math.sqrt(Math.sq(x2 - x1) + Math.sq(y2 - y1));
+};
+
+Math.lerp = function (start, stop, amount) {
+    return start + (stop - start) * amount;
+};
+
+Math.mag = function (a, b, c) {
+    return Math.sqrt(a * a + b * b + c * c);
+};
+
+Math.map = function (value, start1, stop1, start2, stop2) {
+    return start2 + (stop2 - start2) * ((value - start1) / (stop1 - start1));
+};
+
+Math.degreesToRadians = function (degrees) {
+    return Math.TAU * (degrees / 360);
+};
+
+Math.randomBetween = function (low, high) {
+    if (!high) {
+        high = low;
+        low = 0;
+    }
+
+    if (low >= high)
+        return low;
+
+    return low + (high - low) * Math.random();
+};
+
+Math.sq = function (n) {
+    return n * n;
+};
+
 Math.TAU = Math.PI * 2;
 
 Number.prototype.isInt = function () {
