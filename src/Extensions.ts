@@ -1,6 +1,8 @@
 /// <reference path="../Extensions.d.ts" />
 
+//######################################################
 // String
+//######################################################
 
 String.prototype.format = function () {
     var s = arguments[0];
@@ -24,7 +26,9 @@ String.prototype.utf8_to_b64 = function(){ return window.btoa(unescape(encodeURI
 String.prototype.b64_to_utf8 = function(){ return decodeURIComponent(escape(window.atob(this))); };
 
 
+//######################################################
 // Array
+//######################################################
 
 if (!Array.prototype.indexOf) {
     Array.prototype.indexOf = function (searchElement: any, fromIndex?: number) {
@@ -58,7 +62,10 @@ if (!Array.prototype.contains) {
     };
 }
 
+
+//######################################################
 // Math
+//######################################################
 
 Math.clamp = function(value: number, min: number, max: number){
     return Math.min(Math.max(value, min), max);
@@ -72,21 +79,64 @@ Math.normalise = function(num: number, min: number, max: number): number {
     return (num - min) / (max - min);
 };
 
+Math.constrain = function(value: number, low: number, high: number): number{
+    return Math.clamp(value, low, high);
+};
+
+Math.radiansToDegrees = function(radians: number): number {
+    return (radians * 360) / Math.TAU;
+};
+
+Math.distanceBetween = function(x1: number, y1: number, x2: number, y2: number): number {
+    return Math.sqrt(Math.sq(x2 - x1) + Math.sq(y2 - y1));
+};
+
+Math.lerp = function(start: number, stop: number, amount: number): number {
+    return start + (stop-start) * amount;
+};
+
+Math.mag = function(a: number, b: number, c: number): number {
+    return Math.sqrt(a*a + b*b + c*c);
+};
+
+Math.map = function(value: number,
+    start1: number, stop1: number,
+    start2: number, stop2: number): number {
+    return start2 + (stop2 - start2) * ((value - start1) / (stop1 - start1));
+};
+
+Math.degreesToRadians = function(degrees: number): number {
+    return Math.TAU * (degrees / 360);
+};
+
+/**
+ * Get a random number between two numbers.
+ * If 'high' isn't passed, get a number from 0 to 'low'.
+ * @param {Number} low The low number.
+ * @param {Number} [high] The high number.
+ */
+Math.randomBetween = function(low: number, high?: number): number {
+    if (!high){
+        high = low;
+        low = 0;
+    }
+
+    if (low >= high) return low;
+
+    return low + (high-low) * Math.random();
+};
+
+Math.sq = function(n: number): number {
+    return n*n;
+};
+
 Math.TAU = Math.PI * 2;
 
+
+//######################################################
 // Number
+//######################################################
 
 Number.prototype.isInt = function(){ return this % 1 === 0; };
 
-// Animation
-
-//var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-//    window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-//window.requestAnimationFrame = requestAnimationFrame;
-//
-//export class Utils{
-//    constructor(){
-//
-//    }
-//}
 
