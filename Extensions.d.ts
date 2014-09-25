@@ -35,8 +35,10 @@ interface String {
 interface Array<T>{
     clone(): Array<T>;
     last(): any;
-    contains(val: any): boolean;
-    remove(val: any): void;
+    contains(item: any): boolean;
+    remove(item: any): void;
+    removeAt(index: number): void;
+    insert(item: any, index: number): void;
 }
 
 // Number

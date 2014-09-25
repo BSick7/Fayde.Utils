@@ -115,16 +115,24 @@ if (!Array.prototype.last) {
 ;
 
 if (!Array.prototype.contains) {
-    Array.prototype.contains = function (val) {
-        return this.indexOf(val) !== -1;
+    Array.prototype.contains = function (item) {
+        return this.indexOf(item) !== -1;
     };
 }
 
-Array.prototype.remove = function (val) {
-    var index = this.indexOf(val);
+Array.prototype.remove = function (item) {
+    var index = this.indexOf(item);
     if (index > -1) {
         this.splice(index, 1);
     }
+};
+
+Array.prototype.removeAt = function (index) {
+    this.splice(index, 1);
+};
+
+Array.prototype.insert = function (item, index) {
+    this.splice(index, 0, item);
 };
 
 Math.clamp = function (value, min, max) {

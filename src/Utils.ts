@@ -57,17 +57,25 @@ if (!Array.prototype.last) {
 };
 
 if (!Array.prototype.contains) {
-    Array.prototype.contains = function (val: any){
-        return this.indexOf(val) !== -1;
+    Array.prototype.contains = function (item: any){
+        return this.indexOf(item) !== -1;
     };
 }
 
-Array.prototype.remove = function(val: any) {
-    var index = this.indexOf(val);
+Array.prototype.remove = function(item: any) {
+    var index = this.indexOf(item);
     if (index > -1) {
         this.splice(index, 1);
     }
 };
+
+Array.prototype.removeAt = function(index: number) {
+    this.splice(index, 1);
+};
+
+Array.prototype.insert = function(item: any, index: number){
+    this.splice(index, 0, item);
+}
 
 //######################################################
 // Math
