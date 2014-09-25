@@ -5,6 +5,47 @@ var Fayde;
     })(Fayde.Utils || (Fayde.Utils = {}));
     var Utils = Fayde.Utils;
 })(Fayde || (Fayde = {}));
+var Fayde;
+(function (Fayde) {
+    (function (Utils) {
+        var Color = (function () {
+            function Color() {
+            }
+            Color.Float32ColorToARGB = function (float32Color) {
+                var a = (float32Color & 0xff000000) >>> 24;
+                var r = (float32Color & 0xff0000) >>> 16;
+                var g = (float32Color & 0xff00) >>> 8;
+                var b = float32Color & 0xff;
+                var result = [a, r, g, b];
+
+                return result;
+            };
+
+            Color.ComponentToHex = function (c) {
+                var hex = c.toString(16);
+                return hex.length == 1 ? "0" + hex : hex;
+            };
+
+            Color.RGBToHexString = function (rgb) {
+                Color.Coalesce(rgb);
+                return "#" + Color.ComponentToHex(rgb[0]) + Color.ComponentToHex(rgb[1]) + Color.ComponentToHex(rgb[2]);
+            };
+
+            Color.ARGBToHexString = function (argb) {
+                return "#" + Color.ComponentToHex(argb[0]) + Color.ComponentToHex(argb[1]) + Color.ComponentToHex(argb[2]) + Color.ComponentToHex(argb[3]);
+            };
+
+            Color.Coalesce = function (arr) {
+                for (var i = 1; i < arr.length; i++) {
+                    if (typeof (arr[i]) === 'undefined')
+                        arr[i] = arr[i - 1];
+                }
+            };
+            return Color;
+        })();
+    })(Fayde.Utils || (Fayde.Utils = {}));
+    var Utils = Fayde.Utils;
+})(Fayde || (Fayde = {}));
 String.prototype.format = function () {
     var s = arguments[0];
     for (var i = 0; i < arguments.length - 1; i++) {
@@ -78,6 +119,13 @@ if (!Array.prototype.contains) {
         return this.indexOf(val) !== -1;
     };
 }
+
+Array.prototype.remove = function (val) {
+    var index = this.indexOf(val);
+    if (index > -1) {
+        this.splice(index, 1);
+    }
+};
 
 Math.clamp = function (value, min, max) {
     return Math.min(Math.max(value, min), max);

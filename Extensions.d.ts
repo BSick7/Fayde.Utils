@@ -36,6 +36,7 @@ interface Array<T>{
     clone(): Array<T>;
     last(): any;
     contains(val: any): boolean;
+    remove(val: any): void;
 }
 
 // Number

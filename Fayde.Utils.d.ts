@@ -3,6 +3,8 @@ declare module Fayde.Utils {
     var Version: string;
 }
 declare module Fayde.Utils {
+}
+declare module Fayde.Utils {
     class Vector extends MVVM.ObservableObject {
         private _X;
         private _Y;
