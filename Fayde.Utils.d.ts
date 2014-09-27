@@ -1,8 +1,19 @@
+/// <reference path="src/Fayde.d.ts" />
 /// <reference path="Extensions.d.ts" />
 declare module Fayde.Utils {
     var Version: string;
 }
 declare module Fayde.Utils {
+}
+declare module Fayde.Utils {
+    class Size extends MVVM.ObservableObject {
+        private _Width;
+        private _Height;
+        constructor(width: number, height: number);
+        public Width : number;
+        public Height : number;
+        public AspectRatio : number;
+    }
 }
 declare module Fayde.Utils {
     class Vector extends MVVM.ObservableObject {

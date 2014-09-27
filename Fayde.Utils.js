@@ -46,6 +46,62 @@ var Fayde;
     })(Fayde.Utils || (Fayde.Utils = {}));
     var Utils = Fayde.Utils;
 })(Fayde || (Fayde = {}));
+var __extends = this.__extends || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    __.prototype = b.prototype;
+    d.prototype = new __();
+};
+var Fayde;
+(function (Fayde) {
+    (function (Utils) {
+        var Size = (function (_super) {
+            __extends(Size, _super);
+            function Size(width, height) {
+                _super.call(this);
+
+                this.Width = width;
+                this.Height = height;
+            }
+            Object.defineProperty(Size.prototype, "Width", {
+                get: function () {
+                    return this._Width;
+                },
+                set: function (width) {
+                    this._Width = width;
+                    this.OnPropertyChanged("Width");
+                },
+                enumerable: true,
+                configurable: true
+            });
+
+
+            Object.defineProperty(Size.prototype, "Height", {
+                get: function () {
+                    return this._Height;
+                },
+                set: function (height) {
+                    this._Height = height;
+                    this.OnPropertyChanged("Height");
+                },
+                enumerable: true,
+                configurable: true
+            });
+
+
+            Object.defineProperty(Size.prototype, "AspectRatio", {
+                get: function () {
+                    return this.Height / this.Width;
+                },
+                enumerable: true,
+                configurable: true
+            });
+            return Size;
+        })(Fayde.MVVM.ObservableObject);
+        Utils.Size = Size;
+    })(Fayde.Utils || (Fayde.Utils = {}));
+    var Utils = Fayde.Utils;
+})(Fayde || (Fayde = {}));
 String.prototype.format = function () {
     var s = arguments[0];
     for (var i = 0; i < arguments.length - 1; i++) {
@@ -100,12 +156,14 @@ if (!Array.prototype.indexOf) {
         return -1;
     };
 }
+;
 
 if (!Array.prototype.clone) {
     Array.prototype.clone = function () {
         return this.slice(0);
     };
 }
+;
 
 if (!Array.prototype.last) {
     Array.prototype.last = function () {
@@ -119,6 +177,7 @@ if (!Array.prototype.contains) {
         return this.indexOf(item) !== -1;
     };
 }
+;
 
 Array.prototype.remove = function (item) {
     var index = this.indexOf(item);
@@ -195,12 +254,6 @@ Math.TAU = Math.PI * 2;
 
 Number.prototype.isInt = function () {
     return this % 1 === 0;
-};
-var __extends = this.__extends || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    __.prototype = b.prototype;
-    d.prototype = new __();
 };
 var Fayde;
 (function (Fayde) {

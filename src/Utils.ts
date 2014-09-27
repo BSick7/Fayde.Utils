@@ -42,13 +42,13 @@ if (!Array.prototype.indexOf) {
         }
         return -1;
     };
-}
+};
 
 if (!Array.prototype.clone) {
     Array.prototype.clone = function () {
         return this.slice(0);
     };
-}
+};
 
 if (!Array.prototype.last) {
     Array.prototype.last = function () {
@@ -60,7 +60,7 @@ if (!Array.prototype.contains) {
     Array.prototype.contains = function (item: any){
         return this.indexOf(item) !== -1;
     };
-}
+};
 
 Array.prototype.remove = function(item: any) {
     var index = this.indexOf(item);
@@ -75,7 +75,7 @@ Array.prototype.removeAt = function(index: number) {
 
 Array.prototype.insert = function(item: any, index: number){
     this.splice(index, 0, item);
-}
+};
 
 //######################################################
 // Math
