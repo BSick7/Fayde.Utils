@@ -1,4 +1,3 @@
-/// <reference path="./Fayde.d.ts" />
 module Fayde.Utils{
     export class Size extends Fayde.MVVM.ObservableObject {
         private _Width: number;

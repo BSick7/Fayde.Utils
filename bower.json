@@ -1,11 +1,19 @@
 {
   "name": "Fayde.Utils",
+  "version": "0.2.0",
   "ignore": [
     "build",
     "nuget",
     "src",
     "test",
     "testsite",
+    "typings",
     "Gruntfile.js"
-  ]
+  ],
+  "dependencies": {
+    "fayde": "~0.13.0"
+  },
+  "devDependencies": {
+    "qunit": "~1.15.0"
+  }
 }
