@@ -1,7 +1,7 @@
 var Fayde;
 (function (Fayde) {
     (function (Utils) {
-        Utils.Version = '0.2.0';
+        Utils.Version = '0.2.1';
     })(Fayde.Utils || (Fayde.Utils = {}));
     var Utils = Fayde.Utils;
 })(Fayde || (Fayde = {}));
