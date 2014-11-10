@@ -1,22 +1,22 @@
-declare module Fayde.Utils {
-    var Version: string;
-}
-declare module Fayde.Utils {
-}
-interface HTMLElement {
+
+interface HTMLElement{
     ontouchstart: any;
 }
-interface Window {
+
+interface Window{
     btoa(str: string): string;
     atob(str: string): string;
     escape(s: string): any;
     unescape(s: string): any;
 }
+
 interface Window {
     webkitRequestAnimationFrame(callback: FrameRequestCallback): number;
     mozRequestAnimationFrame(callback: FrameRequestCallback): number;
     oRequestAnimationFrame(callback: FrameRequestCallback): number;
 }
+
+// String
 interface String {
     format(template: string, ...args: any[]): string;
     startsWith(text: string): boolean;
@@ -29,17 +29,23 @@ interface String {
     utf8_to_b64(str: string): string;
     b64_to_utf8(str: string): string;
 }
-interface Array<T> {
-    clone(): T[];
+
+// Array
+interface Array<T>{
+    clone(): Array<T>;
     last(): any;
     contains(item: any): boolean;
     remove(item: any): void;
     removeAt(index: number): void;
     insert(item: any, index: number): void;
 }
+
+// Number
 interface Number {
     isInt(): boolean;
 }
+
+// Math
 interface Math {
     clamp(value: number, min: number, max: number): number;
     constrain(value: number, low: number, high: number): number;
@@ -54,43 +60,4 @@ interface Math {
     normalise(num: number, min: number, max: number): number;
     sq(n: number): number;
     TAU: number;
-}
-declare module Fayde.Utils {
-    class Size extends MVVM.ObservableObject {
-        private _Width;
-        private _Height;
-        constructor(width: number, height: number);
-        public Width : number;
-        public Height : number;
-        public AspectRatio : number;
-    }
-}
-declare module Fayde.Utils {
-    class Vector extends MVVM.ObservableObject {
-        private _X;
-        private _Y;
-        constructor(x: number, y: number);
-        public Get(): Vector;
-        public Set(x: number, y: number): void;
-        public X : number;
-        public Y : number;
-        public Add(v: Vector): void;
-        static Add(v1: Vector, v2: Vector): Vector;
-        public Sub(v: Vector): void;
-        static Sub(v1: Vector, v2: Vector): Vector;
-        public Mult(n: number): void;
-        static Mult(v1: Vector, v2: Vector): Vector;
-        static MultN(v1: Vector, n: number): Vector;
-        public Div(n: number): void;
-        static Div(v1: Vector, v2: Vector): Vector;
-        static DivN(v1: Vector, n: number): Vector;
-        public Mag(): number;
-        public MagSq(): number;
-        public Normalise(): void;
-        public Limit(max: number): void;
-        public Equals(v: Vector): boolean;
-        public Heading(): number;
-        static Random2D(): Vector;
-        static FromAngle(angle: number): Vector;
-    }
 }

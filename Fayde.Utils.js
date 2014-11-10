@@ -1,7 +1,7 @@
 var Fayde;
 (function (Fayde) {
     (function (Utils) {
-        Utils.Version = '0.1.0';
+        Utils.Version = '0.2.0';
     })(Fayde.Utils || (Fayde.Utils = {}));
     var Utils = Fayde.Utils;
 })(Fayde || (Fayde = {}));
@@ -46,6 +46,9 @@ var Fayde;
     })(Fayde.Utils || (Fayde.Utils = {}));
     var Utils = Fayde.Utils;
 })(Fayde || (Fayde = {}));
+
+
+
 var __extends = this.__extends || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -137,10 +140,10 @@ String.prototype.contains = function (str) {
     return this.indexOf(str) !== -1;
 };
 String.prototype.utf8_to_b64 = function () {
-    return window.btoa(unescape(encodeURIComponent(this)));
+    return window.btoa(window.unescape(encodeURIComponent(this)));
 };
 String.prototype.b64_to_utf8 = function () {
-    return decodeURIComponent(escape(window.atob(this)));
+    return decodeURIComponent(window.escape(window.atob(this)));
 };
 
 if (!Array.prototype.indexOf) {
