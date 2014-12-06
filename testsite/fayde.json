@@ -3,5 +3,7 @@
     "Fayde.Utils": {
       "exports": "Fayde.Utils"
     }
+  },
+  "themes": "none"
   }
 }
