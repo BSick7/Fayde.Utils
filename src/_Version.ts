@@ -1,3 +1,3 @@
 module Fayde.Utils {
-    export var Version = '0.4.0';
+    export var Version = '0.4.1';
 }
