@@ -2,7 +2,7 @@ var Fayde;
 (function (Fayde) {
     var Utils;
     (function (Utils) {
-        Utils.Version = '0.4.1';
+        Utils.Version = '0.4.2';
     })(Utils = Fayde.Utils || (Fayde.Utils = {}));
 })(Fayde || (Fayde = {}));
 // Copyright 2013 Basarat Ali Syed. All Rights Reserved.
