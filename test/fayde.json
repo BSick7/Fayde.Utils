@@ -2,7 +2,15 @@
   "libs": {
     "Fayde.Utils": {
       "exports": "Fayde.Utils"
-    }
+    },
+    "qunit": {}
   },
-  "themes": "none"
+  "themes": {
+    "Fayde.Utils": "none",
+    "qunit": "none"
+  },
+  "debug": {
+    "warnMissingThemes": false,
+    "warnBrokenPath": false
+  }
 }
