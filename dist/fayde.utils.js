@@ -2,7 +2,7 @@ var Fayde;
 (function (Fayde) {
     var Utils;
     (function (Utils) {
-        Utils.Version = '0.4.2';
+        Utils.Version = '0.5.0';
     })(Utils = Fayde.Utils || (Fayde.Utils = {}));
 })(Fayde || (Fayde = {}));
 // Copyright 2013 Basarat Ali Syed. All Rights Reserved.
@@ -2669,4 +2669,4 @@ var Fayde;
         Utils.Vector = Vector;
     })(Utils = Fayde.Utils || (Fayde.Utils = {}));
 })(Fayde || (Fayde = {}));
-//# sourceMappingURL=Fayde.Utils.js.map
+//# sourceMappingURL=fayde.utils.js.map

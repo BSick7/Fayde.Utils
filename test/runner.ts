@@ -1,5 +1,5 @@
 module runner {
-    var libpath = "lib/Fayde.Utils/dist/Fayde.Utils";
+    var libpath = "lib/fayde.utils/dist/fayde.utils";
     var testModules = [
         ".build/tests/test1"
     ];

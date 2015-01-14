@@ -1,13 +1,11 @@
 {
   "libs": {
-    "Fayde.Utils": {
+    "fayde.utils": {
       "exports": "Fayde.Utils"
-    },
-    "qunit": {}
+    }
   },
   "themes": {
-    "Fayde.Utils": "none",
-    "qunit": "none"
+    "fayde.utils": "none"
   },
   "debug": {
     "warnMissingThemes": false,

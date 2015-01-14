@@ -1,6 +1,6 @@
 {
-  "name": "Fayde.Utils",
-  "version": "0.4.2",
+  "name": "fayde.utils",
+  "version": "0.5.0",
   "ignore": [
     "build",
     "test",
@@ -9,7 +9,7 @@
     "Gruntfile.js"
   ],
   "dependencies": {
-    "fayde": "~0.16.8"
+    "fayde": "~0.16.11"
   },
   "devDependencies": {
     "qunit": "~1.16.0"

@@ -1,5 +1,5 @@
 {
-  "name": "Fayde.Utils",
+  "name": "fayde.utils",
   "client": {
     "tests": [
       {
@@ -13,13 +13,13 @@
     ]
   },
   "type": "lib",
-  "dist": "dist/Fayde.Utils",
+  "dist": "dist/fayde.utils",
   "library": {
     "type": "export",
     "exports": "Fayde.Utils"
   },
   "themes": "none",
   "typings": [
-    "dist/Fayde.Utils.d.ts"
+    "dist/fayde.utils.d.ts"
   ]
 }
